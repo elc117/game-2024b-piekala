@@ -1,9 +1,9 @@
-package com.piekala.valdalxculture.gwt;
+package com.ufsm.clicker.gwt;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import com.piekala.valdalxculture.Main;
+import com.ufsm.clicker.Main;
 
 /** Launches the GWT application. */
 public class GwtLauncher extends GwtApplication {
