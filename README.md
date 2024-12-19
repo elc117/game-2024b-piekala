@@ -12,7 +12,7 @@ Este é um simples jogo de *clicker* desenvolvido com o LibGDX. O objetivo do jo
 
 ## Pré-requisitos
 
-Antes de rodar o jogo, é necessário ter o [LibGDX](https://libgdx.badlogicgames.com/) configurado no seu projeto.
+Antes de rodar o jogo, é necessário ter o [LibGDX](https://libgdx.com/) configurado no seu projeto.
 
 ## Como Rodar
 
