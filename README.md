@@ -1,33 +1,55 @@
-# DinoClicker
+# Clicker Game
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
+Este é um simples jogo de *clicker* desenvolvido com o LibGDX. O objetivo do jogo é clicar em um botão, e a cada clique o contador aumenta. O jogo exibe uma imagem de fundo e um botão centralizado. Um som é reproduzido a cada clique bem-sucedido.
 
-This project was generated with a template including simple application launchers and a main class extending `Game` that sets the first screen.
+## Funcionalidades
 
-## Platforms
+- **Contagem de cliques**: O número de cliques é exibido no canto superior esquerdo da tela.
+- **Som**: A cada clique no botão, um som de sucesso é reproduzido.
+- **Imagem de fundo**: A tela é exibida com uma imagem de fundo ("forest.jpg").
+- **Botão centralizado**: Um botão (imagem "dinosaur.png") é exibido no centro da tela e pode ser clicado.
+- **Respostas rápidas**: O jogo responde instantaneamente aos cliques do usuário.
 
-- `core`: Main module with the application logic shared by all platforms.
-- `html`: Web platform using GWT and WebGL. Supports only Java projects.
+## Pré-requisitos
 
-## Gradle
+Antes de rodar o jogo, é necessário ter o [LibGDX](https://libgdx.badlogicgames.com/) configurado no seu projeto.
 
-This project uses [Gradle](https://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
+## Como Rodar
 
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `html:dist`: compiles GWT sources. The compiled application can be found at `html/build/dist`: you can use any HTTP server to deploy it.
-- `html:superDev`: compiles GWT sources and runs the application in SuperDev mode. It will be available at [localhost:8080/html](http://localhost:8080/html). Use only during development.
-- `idea`: generates IntelliJ project data.
-- `test`: runs unit tests (if any).
+1. Clone o repositório para sua máquina local:
+    ```bash
+    git clone https://github.com/elc117/game-2024b-piekala.git
+    ```
 
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+2. Abra o projeto em sua IDE favorita (por exemplo, IntelliJ IDEA ou Eclipse).
+
+3. Certifique-se de ter o LibGDX configurado corretamente em seu projeto.
+
+4. Execute o aplicativo. O jogo será iniciado com a tela inicial exibindo o botão e a contagem de cliques.
+
+4. 1. ./gradlew html:dist
+
+4. 2. cd .\html\build\dist
+
+4. 3. python -m http.server
+
+## Estrutura do Projeto
+
+### `FirstScreen.java`
+A classe que representa a tela inicial do jogo. Esta tela exibe o fundo, o botão e o contador de cliques. Também lida com o evento de clique e reproduz o som associado.
+
+#### Funções principais:
+- `show()`: Carrega os recursos do jogo (imagem de fundo, botão e som).
+- `render()`: Atualiza a tela a cada quadro.
+- `dispose()`: Libera os recursos carregados, como as imagens e o som.
+- `ClickListener`: Detecta os cliques no botão e aumenta o contador.
+
+### Arquivos de Recursos
+
+- **forest.jpg**: Imagem de fundo.
+- **dinosaur.png**: Imagem do botão.
+- **success.mp3**: Som de sucesso para cada clique.
+
+## Licença
+
+Este jogo utilizou Assets de sites opensource, em caso de problemas de direitos, solicite um commit para o proprietário.
